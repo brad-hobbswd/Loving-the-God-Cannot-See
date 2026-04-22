@@ -10,27 +10,58 @@
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: #f9fafb;
-    color: #1f2937;
+    background: #f8f6f2;
+    color: #1c2533;
+    line-height: 1.9;
 }
 
+nav {
+    background:#ffffff;
+    border-bottom:1px solid #e6e3dc;
+    padding:15px 20px;
+    text-align:center;
+}
+
+nav a {
+    margin:0 15px;
+    text-decoration:none;
+    color:#1c2533;
+    transition:0.3s;
+}
+
+nav a:hover {
+    color:#c9a25d;
+}
+
+/* BANNER (NO TEXT) */
+.banner {
+    height: 360px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(28,37,51,0.15),
+            rgba(248,246,242,0.95)
+        ),
+        url('banner.jpg') center/cover no-repeat;
+}
+
+/* HEADER (TITLE ONLY, NOT REPEATED ON IMAGE) */
 header {
-    padding: 80px 20px 60px;
+    padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(to bottom, #111827, #1f2937);
+    background: linear-gradient(to bottom, #1c2533, #2a3445);
     color: #ffffff;
 }
 
 header h1 {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.4;
-    font-weight: 500;
 }
 
 header p {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 18px;
     opacity: 0.85;
 }
@@ -41,34 +72,48 @@ header p {
     padding: 0 20px;
 }
 
+/* CHAPTER LIST */
 .chapter-list a {
     display: block;
     padding: 20px;
     margin-bottom: 15px;
     background: #ffffff;
-    border-left: 4px solid #1f2937;
+    border-left: 4px solid #c9a25d;
     text-decoration: none;
-    color: #111827;
+    color: #1c2533;
     transition: 0.3s;
     font-size: 17px;
 }
 
 .chapter-list a:hover {
-    background: #f3f4f6;
+    background: #f1ede6;
     transform: translateX(4px);
 }
 
+/* FOOTER */
 footer {
-    text-align: center;
+    margin-top: 60px;
     padding: 30px;
+    text-align: center;
     font-size: 14px;
     color: #6b7280;
+    border-top: 1px solid #e6e3dc;
+    background:#ffffff;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+</nav>
+
+<!-- BANNER -->
+<div class="banner"></div>
+
+<!-- TITLE (ONLY HERE, NOT ON IMAGE) -->
 <header>
     <h1>Loving the God We Cannot See Through the People We Can See</h1>
     <p>Bradley Hobbs</p>
@@ -88,7 +133,7 @@ footer {
 </div>
 
 <footer>
-    © Bradley Hobbs
+    © Bradley Hobbs • Loving the God We Cannot See Through the People We Can See
 </footer>
 
 </body>
