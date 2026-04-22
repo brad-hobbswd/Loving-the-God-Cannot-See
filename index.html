@@ -33,19 +33,19 @@ nav a:hover {
     color:#c9a25d;
 }
 
-/* BANNER (NO TEXT) */
+/* FIXED BANNER (NO CROPPING) */
 .banner {
-    height: 360px;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(28,37,51,0.15),
-            rgba(248,246,242,0.95)
-        ),
-        url('F68E8BAC-A77B-447A-9A03-0E4A07954535.png') center/cover no-repeat;
+    width: 100%;
+    background: #f8f6f2;
 }
 
-/* HEADER (TITLE ONLY, NOT REPEATED ON IMAGE) */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER (UNCHANGED STRUCTURE) */
 header {
     padding: 60px 20px;
     text-align: center;
@@ -110,10 +110,12 @@ footer {
     <a href="about.html">About</a>
 </nav>
 
-<!-- BANNER -->
-<div class="banner"></div>
+<!-- FIXED BANNER -->
+<div class="banner">
+    <img src="F68E8BAC-A77B-447A-9A03-0E4A07954535.png" alt="Banner">
+</div>
 
-<!-- TITLE (ONLY HERE, NOT ON IMAGE) -->
+<!-- TITLE (ONLY HERE) -->
 <header>
     <h1>Loving the God We Cannot See Through the People We Can See</h1>
     <p>Bradley Hobbs</p>
