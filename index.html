@@ -74,15 +74,91 @@ nav a:hover {
 }
 
 /* FOOTER */
-footer {
-    margin-top: 60px;
-    padding: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #6b7280;
-    border-top: 1px solid #e6e3dc;
-    background:#ffffff;
+
+footer{
+margin-top:80px;
+padding:60px 25px;
+background:#ffffff;
+border-top:1px solid #e6e3dc;
 }
+
+.footer-container{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.footer-container h3{
+color:#1c2533;
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+.footer-tagline{
+color:#6b7280;
+font-style:italic;
+margin-bottom:30px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#1c2533;
+}
+
+.footer-links a:hover{
+color:#c9a25d;
+}
+
+.footer-divider{
+border:none;
+height:1px;
+background:#e6e3dc;
+max-width:250px;
+margin:35px auto;
+}
+
+.support-title{
+color:#1c2533;
+margin-bottom:20px;
+}
+
+.donation-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin:30px 0;
+}
+
+.donate-btn{
+display:inline-block;
+padding:12px 24px;
+background:#c9a25d;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.donate-btn:hover{
+opacity:.9;
+transform:translateY(-3px);
+}
+
+.copyright{
+color:#6b7280;
+font-size:.9rem;
+}
+
 </style>
 </head>
 
@@ -113,7 +189,87 @@ footer {
 </div>
 
 <footer>
-    © Bradley Hobbs • Loving the God We Cannot See Through the People We Can See
+
+<div class="footer-container">
+
+<h3>
+Loving the God We Cannot See Through the People We Can See
+</h3>
+
+<p class="footer-tagline">
+
+Learning to love Jesus by loving the people He places before us.
+
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="chapter1.html">
+Begin Reading
+</a>
+
+</div>
+
+<hr class="footer-divider">
+
+<h3 class="support-title">
+Support My Writing
+</h3>
+
+<p>
+
+Every book, devotional, article, and study shared across these websites is freely available to read. Many hours of prayer, research, writing, editing, and website development go into creating and maintaining these resources.
+
+</p>
+
+<div class="donation-buttons">
+
+<a
+href="https://cash.app/$brad1gabe"
+target="_blank"
+rel="noopener noreferrer"
+class="donate-btn">
+
+Cash App
+
+</a>
+
+<a
+href="https://paypal.me/brad1god"
+target="_blank"
+rel="noopener noreferrer"
+class="donate-btn">
+
+PayPal
+
+</a>
+
+</div>
+
+<p>
+
+Your support helps make future books, devotionals, studies, ministry resources, website projects, and new writing possible.
+
+</p>
+
+<hr class="footer-divider">
+
+<p class="copyright">
+
+© 2026 Bradley Hobbs
+
+</p>
+
+</div>
+
 </footer>
 
 </body>
