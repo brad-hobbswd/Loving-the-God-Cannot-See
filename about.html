@@ -61,6 +61,15 @@ footer a{color:#1c2533;text-decoration:none}
  .site-nav .mobile-links a{display:block;padding:15px 22px;border-top:1px solid #f0ede7}
 }
 
+
+/* iOS Safari full-width mobile dropdown fix */
+@media (max-width:680px) {
+ .site-nav .nav-inner{width:100%;max-width:none;display:flex;justify-content:stretch;position:relative}
+ .site-nav .mobile-menu{display:block;width:100%;min-width:0;position:static}
+ .site-nav .mobile-menu summary{display:flex;align-items:center;justify-content:center;width:46px;height:44px;margin-left:auto;box-sizing:border-box}
+ .site-nav .mobile-menu[open] .mobile-links{position:absolute;top:100%;left:0;right:0;width:100%;min-width:0;max-width:none;box-sizing:border-box;transform:none;display:flex;flex-direction:column;z-index:150;background:#fff;padding:6px 0;box-shadow:0 12px 22px rgba(28,37,51,.14)}
+ .site-nav .mobile-links a{display:block;box-sizing:border-box;width:100%;white-space:normal;text-align:left;line-height:1.4;padding:14px 22px}
+}
 </style>
 </head>
 <body>
