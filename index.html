@@ -159,34 +159,22 @@ color:#6b7280;
 font-size:.9rem;
 }
 
-</style>
+.site-nav{position:relative;display:flex;align-items:center;justify-content:center;gap:34px;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e3dc;z-index:10}.site-nav>a{margin:0;text-decoration:none;color:#1c2533;font-weight:600}.site-nav>a:hover{color:#b88c43}.menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}.mobile-links{display:none}@media(max-width:680px){.site-nav{justify-content:flex-end;min-height:48px;padding:12px 18px}.site-nav>a{display:none}.menu-toggle{display:block}.mobile-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.1)}.mobile-links a{padding:14px 22px;text-decoration:none;color:#1c2533;border-top:1px solid #f0ede7}}.landing-content{max-width:1000px;margin:0 auto;padding:24px}.banner{max-width:1100px;margin:24px auto 0;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12)}.banner img{display:block;width:100%;height:auto}.welcome{max-width:800px;margin:72px auto;text-align:center}.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px!important;font-weight:700;color:#a47b38}.welcome h1{font-size:clamp(32px,5vw,52px);line-height:1.18;font-weight:500;margin:0 auto 24px}.welcome .lead{font-size:19px;line-height:1.85;color:#596170;max-width:760px;margin:0 auto 30px}.primary-link,.email-link{display:inline-block;padding:13px 24px;border-radius:30px;background:#c9a25d;color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-weight:700}.message-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 auto 76px}.message-grid article{padding:28px 25px;background:#fff;border:1px solid #ebe7df;border-radius:10px}.message-grid .number{font-family:Arial,sans-serif;font-size:12px;color:#b88c43}.message-grid h2{font-size:22px;font-weight:500;margin:14px 0}.message-grid p,.reading-invitation p{font-size:16px;color:#626b78;line-height:1.8}.reading-invitation{text-align:center;background:#eeebe4;border-radius:12px;padding:48px 28px;margin-bottom:30px}.reading-invitation h2{font-size:clamp(26px,4vw,38px);font-weight:500;margin:0 auto 14px;max-width:650px}.text-link{color:#8c672f;text-decoration:none;font-weight:700}@media(max-width:720px){.banner{margin:14px}.landing-content{padding:10px 18px}.welcome{margin:48px auto}.welcome .lead{font-size:17px}.message-grid{grid-template-columns:1fr;gap:14px;margin-bottom:48px}.reading-invitation{padding:36px 22px}}</style>
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-</nav>
+<nav class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
+<div class="mobile-links" id="primary-links"><a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
 
 <!-- BANNER (TITLE LIVES HERE ONLY) -->
 <div class="banner">
     <img src="F68E8BAC-A77B-447A-9A03-0E4A07954535.png" alt="Banner">
 </div>
 
-<!-- CONTENT STARTS CLEAN -->
-<div class="container">
-
-    <div class="chapter-list">
-        <a href="chapter1.html">Chapter 1: Loving God Became Easier Than Loving People</a>
-        <a href="chapter2.html">Chapter 2: When Church Hurt Teaches the Wrong Lessons</a>
-        <a href="chapter3.html">Chapter 3: Loving People Without Losing Wisdom</a>
-        <a href="chapter4.html">Chapter 4: Forgiveness Unlocks Supernatural Healing</a>
-        <a href="chapter5.html">Chapter 5: Seeing People Through the Eyes of Jesus</a>
-        <a href="chapter6.html">Chapter 6: Love as the Proof of God’s Presence</a>
-    </div>
-
-</div>
+<main class="landing-content"><section class="welcome"><p class="eyebrow">A message about faith, compassion, and the way we treat one another</p><h1>Love for God becomes visible in how we love people.</h1><p class="lead">It is possible to speak of loving God while struggling to love the people around us. This book invites readers to examine that space honestly and discover how the love of Jesus can shape the way we respond to hurt, disappointment, conflict, and one another.</p><a class="primary-link" href="contents.html">Explore the Contents →</a></section><section class="message-grid"><article><span class="number">01</span><h2>Faith That Moves Beyond Words</h2><p>Love is more than something we profess. It becomes visible through patience, mercy, forgiveness, and the choices we make in our relationships.</p></article><article><span class="number">02</span><h2>Healing Without Losing Wisdom</h2><p>Past wounds do not have to define the future. Loving others does not mean ignoring harm or abandoning healthy boundaries.</p></article><article><span class="number">03</span><h2>A Life That Reflects Jesus</h2><p>The invitation is to let the Spirit of Jesus transform not only what we believe, but how we see and treat the people around us.</p></article></section><section class="reading-invitation"><p class="eyebrow">Begin the journey</p><h2>Let what is unseen become visible through love.</h2><p>Explore the six chapters and consider what it means to love the God we cannot see through the people we can.</p><a class="text-link" href="chapter1.html">Start with Chapter One →</a></section></main>
 
 <footer>
 
@@ -202,21 +190,7 @@ Learning to love Jesus by loving the people He places before us.
 
 </p>
 
-<div class="footer-links">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="chapter1.html">
-Begin Reading
-</a>
-
-</div>
+<div class="footer-links"><a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="chapter1.html">Begin Reading</a></div>
 
 <hr class="footer-divider">
 
@@ -272,5 +246,5 @@ Your support helps make future books, devotionals, studies, ministry resources, 
 
 </footer>
 
-</body>
+<script>document.addEventListener('DOMContentLoaded',function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.mobile-links');if(!b||!m)return;b.addEventListener('click',function(){const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open navigation':'Close navigation');b.textContent=open?'☰':'✕';m.classList.toggle('open',!open);});});</script></body>
 </html>
