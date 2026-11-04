@@ -3,124 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About - Loving the God We Cannot See Through the People We Can See</title>
-
+<meta name="description" content="About Bradley Hobbs, author of Loving the God We Cannot See Through the People We Can See.">
+<title>About the Author | Loving the God We Cannot See</title>
 <style>
-body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background: #f8f6f2;
-    color: #1c2533;
-    line-height: 1.9;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:#f8f6f2;color:#1c2533;line-height:1.85}
+header{padding:66px 22px;text-align:center;background:linear-gradient(135deg,#1c2533,#344154);color:#fff}
+header .eyebrow{font:700 11px Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#d8bd8a}
+header h1{max-width:850px;margin:12px auto 10px;font-size:clamp(32px,5vw,46px);font-weight:500;line-height:1.2}
+header p{max-width:680px;margin:0 auto;color:#e1e5ea;font-size:17px}
+.page-wrap{max-width:900px;margin:58px auto;padding:0 22px}
+.author-panel{display:grid;grid-template-columns:1fr;gap:24px;padding:38px;background:#fff;border:1px solid #e9e5dc;border-radius:12px;box-shadow:0 12px 32px rgba(28,37,51,.05)}
+.author-panel h2,.work-panel h2{margin:0 0 18px;font-size:27px;font-weight:500}
+p{font-size:17px;margin:0 0 20px}
+.author-signoff{margin-top:28px;color:#8c672f;font-style:italic}
+.work-panel{margin-top:26px;padding:34px 38px;background:#eeebe4;border-radius:12px}
+.work-panel p:last-child,.author-panel p:last-child{margin-bottom:0}
+footer{margin-top:70px;padding:28px 20px;text-align:center;background:#fff;border-top:1px solid #e6e3dc;color:#6b7280;font:14px Arial,sans-serif}
+footer a{color:#1c2533;text-decoration:none}
 
-/* NAV */
-nav {
-    background:#ffffff;
-    border-bottom:1px solid #e6e3dc;
-    padding:15px 20px;
-    text-align:center;
+/* Shared site navigation */
+.site-nav{position:relative;z-index:100;width:100%;margin:0;padding:0 22px;background:#fff;border-bottom:1px solid #e6e3dc;box-sizing:border-box}
+.site-nav .nav-inner{position:relative;max-width:1100px;min-height:62px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:36px}
+.site-nav .nav-link,.site-nav .mobile-links a{margin:0;padding:0;color:#1c2533;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:.02em;transition:color .2s ease}
+.site-nav .nav-link:hover,.site-nav .mobile-links a:hover{color:#b88c43}
+.site-nav .menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;line-height:1;cursor:pointer}
+.site-nav .mobile-links{display:none}
+@media(max-width:680px){
+ .site-nav{padding:0 18px}
+ .site-nav .nav-inner{min-height:56px;justify-content:flex-end;gap:0}
+ .site-nav .nav-link{display:none}
+ .site-nav .menu-toggle{display:block}
+ .site-nav .mobile-links.open{display:flex;position:absolute;top:100%;left:-18px;right:-18px;flex-direction:column;gap:0;padding:6px 0;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.12)}
+ .site-nav .mobile-links a{display:block;padding:15px 22px;border-top:1px solid #f0ede7}
 }
-
-nav a {
-    margin:0 15px;
-    text-decoration:none;
-    color:#1c2533;
-    transition:0.3s;
-}
-
-nav a:hover {
-    color:#c9a25d;
-}
-
-/* HEADER */
-header {
-    padding: 60px 20px;
-    text-align: center;
-    background: linear-gradient(to bottom, #1c2533, #2a3445);
-    color: #ffffff;
-}
-
-header h1 {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 28px;
-}
-
-/* CONTENT */
-.container {
-    max-width: 760px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-p {
-    margin-bottom: 26px;
-    font-size: 17px;
-}
-
-/* NAV LINKS (PREV/NEXT) */
-.nav {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #1c2533;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: #c9a25d;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 60px;
-    padding: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #6b7280;
-    border-top: 1px solid #e6e3dc;
-    background:#ffffff;
-}
-.site-nav{position:relative;display:flex;align-items:center;justify-content:center;gap:34px;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e3dc;z-index:10}.site-nav>a{margin:0;text-decoration:none;color:#1c2533;font-weight:600}.site-nav>a:hover{color:#b88c43}.menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}.mobile-links{display:none}@media(max-width:680px){.site-nav{justify-content:flex-end;min-height:48px;padding:12px 18px}.site-nav>a{display:none}.menu-toggle{display:block}.mobile-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.1)}.mobile-links a{padding:14px 22px;text-decoration:none;color:#1c2533;border-top:1px solid #f0ede7}}</style>
+@media(max-width:600px){header{padding:48px 20px}.page-wrap{margin:34px auto}.author-panel,.work-panel{padding:25px 22px}p{font-size:16px}}
+</style>
 </head>
-
 <body>
-
 <nav class="site-nav" aria-label="Main navigation">
-<a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
-<div class="mobile-links" id="primary-links"><a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
-
+  <div class="nav-inner">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="contents.html">Contents</a>
+    <a class="nav-link" href="about.html">About the Author</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
+    <div class="mobile-links" id="primary-links">
+      <a href="index.html">Home</a>
+      <a href="contents.html">Contents</a>
+      <a href="about.html">About the Author</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 <header>
-    <h1>About This Work</h1>
+  <p class="eyebrow">The writer behind the message</p>
+  <h1>About the Author</h1>
+  <p>Bradley Hobbs writes about faith that moves beyond words and becomes visible in the way we love people.</p>
 </header>
-
-<div class="container">
-
-<p>Loving the God We Cannot See Through the People We Can See was written from a place of lived experience, not theory. The message is not abstract. It is formed in the tension between devotion to Jesus and the difficulty of loving people shaped by hurt, misunderstanding, and disappointment.</p>
-
-<p>This work explores a reality many believers quietly carry. Loving Jesus often feels natural, safe, and deeply personal. Loving people, especially after being wounded, can feel complex and at times overwhelming. The separation between these two experiences becomes subtle, yet significant.</p>
-
-<p>Each chapter follows the journey of individuals who have encountered this divide. Their stories reflect common struggles: church hurt, guarded hearts, fear of vulnerability, and the challenge of forgiveness. Through each account, one truth becomes increasingly clear. The Spirit of Jesus does not lead people into isolation, but into restored connection.</p>
-
-<p>The central message is simple yet demanding. Love for God is not meant to remain internal or private. It is revealed, tested, and matured through the way people are treated. Genuine transformation becomes visible not only in prayer or worship, but in patience, compassion, forgiveness, and wisdom in relationship.</p>
-
-<p>This is not a call to ignore pain or abandon discernment. It is an invitation to allow healing to reshape how love is expressed. Through the Spirit of Jesus, what once felt unsafe can become restored, and what once felt impossible can become lived reality.</p>
-
-<p>Bradley Hobbs writes with the intention of bringing clarity, healing, and alignment between faith and action, emphasizing that the most visible evidence of God at work is love that remains steady, even in the presence of difficulty.</p>
-
-</div>
-
-<footer>
-    © Bradley Hobbs • Loving the God We Cannot See Through the People We Can See
-</footer>
-
-<script>document.addEventListener('DOMContentLoaded',function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.mobile-links');if(!b||!m)return;b.addEventListener('click',function(){const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open navigation':'Close navigation');b.textContent=open?'☰':'✕';m.classList.toggle('open',!open);});});</script></body>
+<main class="page-wrap">
+  <section class="author-panel">
+    <div>
+      <h2>Bradley Hobbs</h2>
+      <p>Bradley Hobbs is a Christian author, educator, and writer whose work explores the relationship between faith, spiritual growth, and the everyday choices that shape how we treat one another. His writing is rooted in a desire to bring biblical truth into honest conversations about real life, including forgiveness, church hurt, healing, compassion, and the responsibility believers have to love beyond familiar words.</p>
+      <p>With a background in education and technology, Bradley values clear communication, thoughtful learning, and resources that make meaningful ideas accessible. These interests come together in his writing through practical teaching, reflective questions, and an emphasis on allowing faith to shape both character and conduct.</p>
+      <p>Bradley believes that devotion to Jesus should be reflected in the way people respond to those around them. Love is not simply something to profess in worship or conversation. It is demonstrated through patience, mercy, humility, forgiveness, wisdom, and the willingness to see people with compassion without pretending that hurt does not exist.</p>
+      <p>His purpose in writing is not to offer easy answers or dismiss the complexity of painful experiences. It is to invite readers to examine their hearts, pursue genuine healing, and allow the Spirit of Jesus to make the love of God visible through their lives.</p>
+      <p class="author-signoff">Bradley Hobbs</p>
+    </div>
+  </section>
+  <section class="work-panel">
+    <h2>About This Book</h2>
+    <p><em>Loving the God We Cannot See Through the People We Can See</em> was written from the tension many believers experience between loving God and navigating difficult relationships with people. It considers how hurt, disappointment, guardedness, and unforgiveness can affect the way love is expressed.</p>
+    <p>Across six chapters, the book invites readers to consider how love for God becomes visible through the way they treat others. It does not ask readers to ignore harm, excuse wrongdoing, or abandon discernment. Instead, it calls them to pursue healing while allowing the character of Jesus to shape their responses.</p>
+    <p>The central message is both simple and challenging: the God we cannot see should be revealed through the love we show to the people we can.</p>
+  </section>
+</main>
+<footer>© 2026 Bradley Hobbs · <a href="index.html">Loving the God We Cannot See Through the People We Can See</a></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const button=document.querySelector('.menu-toggle');
+  const menu=document.querySelector('.mobile-links');
+  if(!button||!menu)return;
+  button.addEventListener('click',function(){
+    const isOpen=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!isOpen));
+    button.setAttribute('aria-label',isOpen?'Open navigation':'Close navigation');
+    button.textContent=isOpen?'☰':'✕';
+    menu.classList.toggle('open',!isOpen);
+  });
+});
+</script>
+</body>
 </html>
