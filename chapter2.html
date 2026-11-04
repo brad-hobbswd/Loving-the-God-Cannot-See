@@ -88,15 +88,15 @@ footer {
     border-top: 1px solid #e6e3dc;
     background:#ffffff;
 }
-</style>
+.site-nav{position:relative;display:flex;align-items:center;justify-content:center;gap:34px;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e3dc;z-index:10}.site-nav>a{margin:0;text-decoration:none;color:#1c2533;font-weight:600}.site-nav>a:hover{color:#b88c43}.menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}.mobile-links{display:none}@media(max-width:680px){.site-nav{justify-content:flex-end;min-height:48px;padding:12px 18px}.site-nav>a{display:none}.menu-toggle{display:block}.mobile-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.1)}.mobile-links a{padding:14px 22px;text-decoration:none;color:#1c2533;border-top:1px solid #f0ede7}}</style>
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-</nav>
+<nav class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
+<div class="mobile-links" id="primary-links"><a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
 
 <header>
     <h2>Loving the God We Cannot See Through the People We Can See</h2>
@@ -136,5 +136,5 @@ footer {
     © Bradley Hobbs • Loving the God We Cannot See Through the People We Can See
 </footer>
 
-</body>
+<script>document.addEventListener('DOMContentLoaded',function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.mobile-links');if(!b||!m)return;b.addEventListener('click',function(){const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open navigation':'Close navigation');b.textContent=open?'☰':'✕';m.classList.toggle('open',!open);});});</script></body>
 </html>
