@@ -175,6 +175,29 @@ font-size:.9rem;
  .site-nav .mobile-links.open{display:flex;position:absolute;top:100%;left:-18px;right:-18px;flex-direction:column;gap:0;padding:6px 0;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.12)}
  .site-nav .mobile-links a{display:block;padding:15px 22px;border-top:1px solid #f0ede7}
 }
+
+/* Reliable shared responsive navigation */
+.site-nav{position:relative;z-index:100;width:100%;margin:0;padding:0 22px;background:#fff;border-bottom:1px solid #e6e3dc;box-sizing:border-box}
+.site-nav .nav-inner{position:relative;max-width:1100px;min-height:62px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:36px}
+.site-nav .nav-link,.site-nav .mobile-links a{margin:0;padding:0;color:#1c2533;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:.02em;transition:color .2s ease}
+.site-nav .nav-link:hover,.site-nav .mobile-links a:hover{color:#b88c43}
+.site-nav .mobile-menu{display:none}
+.site-nav .mobile-menu summary{list-style:none;cursor:pointer;user-select:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font:22px/1 Arial,sans-serif}
+.site-nav .mobile-menu summary::-webkit-details-marker{display:none}
+.site-nav .mobile-menu .menu-close{display:none}
+.site-nav .mobile-menu[open] .menu-open{display:none}
+.site-nav .mobile-menu[open] .menu-close{display:inline}
+.site-nav .mobile-links{display:none}
+@media(max-width:680px){
+ .site-nav{padding:0 18px}
+ .site-nav .nav-inner{min-height:56px;justify-content:flex-end;gap:0}
+ .site-nav .nav-link{display:none}
+ .site-nav .mobile-menu{display:block}
+ .site-nav .mobile-links{display:none}
+ .site-nav .mobile-menu[open] .mobile-links{display:flex;position:absolute;top:100%;left:-18px;right:-18px;z-index:101;flex-direction:column;gap:0;padding:6px 0;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.12)}
+ .site-nav .mobile-links a{display:block;padding:15px 22px;border-top:1px solid #f0ede7}
+}
+
 </style>
 </head>
 
@@ -186,13 +209,15 @@ font-size:.9rem;
     <a class="nav-link" href="contents.html">Contents</a>
     <a class="nav-link" href="about.html">About the Author</a>
     <a class="nav-link" href="contact.html">Contact</a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
-    <div class="mobile-links" id="primary-links">
-      <a href="index.html">Home</a>
-      <a href="contents.html">Contents</a>
-      <a href="about.html">About the Author</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation"><span class="menu-open">☰</span><span class="menu-close">✕</span></summary>
+      <div class="mobile-links">
+        <a href="index.html">Home</a>
+        <a href="contents.html">Contents</a>
+        <a href="about.html">About the Author</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </details>
   </div>
 </nav>
 
@@ -273,19 +298,5 @@ Your support helps make future books, devotionals, studies, ministry resources, 
 
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  const button=document.querySelector('.menu-toggle');
-  const menu=document.querySelector('.mobile-links');
-  if(!button||!menu)return;
-  button.addEventListener('click',function(){
-    const isOpen=button.getAttribute('aria-expanded')==='true';
-    button.setAttribute('aria-expanded',String(!isOpen));
-    button.setAttribute('aria-label',isOpen?'Open navigation':'Close navigation');
-    button.textContent=isOpen?'☰':'✕';
-    menu.classList.toggle('open',!isOpen);
-  });
-});
-</script>
 </body>
 </html>
