@@ -88,15 +88,33 @@ footer {
     border-top: 1px solid #e6e3dc;
     background:#ffffff;
 }
-.site-nav{position:relative;display:flex;align-items:center;justify-content:center;gap:34px;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e3dc;z-index:10}.site-nav>a{margin:0;text-decoration:none;color:#1c2533;font-weight:600}.site-nav>a:hover{color:#b88c43}.menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}.mobile-links{display:none}@media(max-width:680px){.site-nav{justify-content:flex-end;min-height:48px;padding:12px 18px}.site-nav>a{display:none}.menu-toggle{display:block}.mobile-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.1)}.mobile-links a{padding:14px 22px;text-decoration:none;color:#1c2533;border-top:1px solid #f0ede7}}</style>
+.site-nav{position:relative;display:flex;align-items:center;justify-content:center;gap:34px;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e3dc;z-index:10}.site-nav>a{margin:0;text-decoration:none;color:#1c2533;font-weight:600}.site-nav>a:hover{color:#b88c43}.menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}.mobile-links{display:none}@media(max-width:680px){.site-nav{justify-content:flex-end;min-height:48px;padding:12px 18px}.site-nav>a{display:none}.menu-toggle{display:block}.mobile-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.1)}.mobile-links a{padding:14px 22px;text-decoration:none;color:#1c2533;border-top:1px solid #f0ede7}}
+/* Shared site navigation */
+.site-nav{position:relative;z-index:100;width:100%;margin:0;padding:0 22px;background:#fff;border-bottom:1px solid #e6e3dc;box-sizing:border-box}
+.site-nav .nav-inner{position:relative;max-width:1100px;min-height:62px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:36px}
+.site-nav .nav-link,.site-nav .mobile-links a{margin:0;padding:0;color:#1c2533;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:.02em;transition:color .2s ease}
+.site-nav .nav-link:hover,.site-nav .mobile-links a:hover{color:#b88c43}
+.site-nav .menu-toggle{display:none;border:1px solid #e6e3dc;background:#fff;color:#1c2533;border-radius:8px;padding:8px 12px;font-size:22px;line-height:1;cursor:pointer}
+.site-nav .mobile-links{display:none}
+@media(max-width:680px){.site-nav{padding:0 18px}.site-nav .nav-inner{min-height:56px;justify-content:flex-end;gap:0}.site-nav .nav-link{display:none}.site-nav .menu-toggle{display:block}.site-nav .mobile-links.open{display:flex;position:absolute;top:100%;left:-18px;right:-18px;flex-direction:column;gap:0;padding:6px 0;background:#fff;border-bottom:1px solid #e6e3dc;box-shadow:0 12px 22px rgba(28,37,51,.12)}.site-nav .mobile-links a{display:block;padding:15px 22px;border-top:1px solid #f0ede7}}
+
+</style>
 </head>
 
 <body>
 
 <nav class="site-nav" aria-label="Main navigation">
-<a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
-<div class="mobile-links" id="primary-links"><a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="contents.html">Contents</a>
+    <a class="nav-link" href="about.html">About the Author</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="primary-links">☰</button>
+    <div class="mobile-links" id="primary-links">
+      <a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About the Author</a><a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <header>
     <h2>Loving the God We Cannot See Through the People We Can See</h2>
@@ -136,5 +154,19 @@ footer {
     © Bradley Hobbs • Loving the God We Cannot See Through the People We Can See
 </footer>
 
-<script>document.addEventListener('DOMContentLoaded',function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.mobile-links');if(!b||!m)return;b.addEventListener('click',function(){const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.setAttribute('aria-label',open?'Open navigation':'Close navigation');b.textContent=open?'☰':'✕';m.classList.toggle('open',!open);});});</script></body>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const button=document.querySelector('.menu-toggle');
+ const menu=document.querySelector('.mobile-links');
+ if(!button||!menu)return;
+ button.addEventListener('click',function(){
+  const isOpen=button.getAttribute('aria-expanded')==='true';
+  button.setAttribute('aria-expanded',String(!isOpen));
+  button.setAttribute('aria-label',isOpen?'Open navigation':'Close navigation');
+  button.textContent=isOpen?'☰':'✕';
+  menu.classList.toggle('open',!isOpen);
+ });
+});
+</script>
+</body>
 </html>
